@@ -1,0 +1,71 @@
+{
+  "parserOptions": {
+    "project": "./tsconfig-eslint.json"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules"]
+      },
+      
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "react-app",
+    "airbnb",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "plugin:import/typescript"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true,
+    "node": true },
+  "plugins": [
+    "jsx-a11y",
+    "prettier",
+    "simple-import-sort",
+    "import"
+  ],
+  "rules": {
+    "arrow-parens": "off",
+    "import/extensions": "off",
+    "semi": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "prettier/prettier": [
+      "error", {
+        "semi": true,
+        "endOfLine": "auto"
+      }
+    ],
+    "jsx-a11y/aria-role": [ 2, {
+      "ignoreNonDOM": true
+    }],
+    "simple-import-sort/imports": "error",
+    "sort-imports": "off",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/state-in-constructor": "off",
+    "no-param-reassign": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-unused-vars": "off",
+    "no-unused-vars": "off",
+    "import/prefer-default-export": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "no-redeclare": "off"
+  }
+}
